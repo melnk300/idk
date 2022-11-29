@@ -1,0 +1,173 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #e2e2e2;
+}
+
+.navigation {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0.5em;
+    display: flex;
+    list-style-type: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.navigation > li > a, a:hover, a:active, a:focus, a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+.link {
+
+}
+
+.link.active:after {
+    display: block;
+    content: '';
+    background-color: orange;
+    width: 100%;
+    height: 2px;
+}
+
+.post {
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+.post_image {
+    display: block;
+    height: 20vh;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.post_content {
+    position: relative;
+}
+
+.post_content-inner {
+    background-color: #ffffff;
+    padding: 1em;
+    border-radius: 10px;
+    width: 90%;
+    margin: -2em auto 0;
+}
+
+.post_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post_header_meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.post_title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.post_date {
+    font-size: 1em;
+    color: #999;
+    margin: 0;
+}
+
+.post_category {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    margin: .5em 0;
+    color: #777;
+}
+
+.post_category:before {
+    display: block;
+    content: '';
+    background-color: royalblue;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 0.2em;
+
+    &.green {
+        background-color: green;
+    }
+
+    &.orange {
+        background-color: orange;
+    }
+
+    &.blue {
+        background-color: blue;
+    }
+
+    &.violet {
+        background-color: violet;
+    }
+
+    &.purple {
+        background-color: purple;
+    }
+
+    &.yellow {
+        background-color: gold;
+    }
+}
+
+.post_category {
+    &.green:before {
+        background-color: green;
+    }
+
+    &.orange:before {
+        background-color: orange;
+    }
+
+    &.blue:before {
+        background-color: blue;
+    }
+
+    &.violet:before {
+        background-color: violet;
+    }
+
+    &.purple:before {
+        background-color: purple;
+    }
+
+    &.yellow:before {
+        background-color: gold;
+    }
+}
+
+.post_text {
+    font-size: 1.2em;
+}
+
+.post_state {
+    margin-top: .6em;
+    display: inline-block;
+    padding: 7px 15px;
+    border: 1px solid;
+
+    &.agree {
+        border-color: limegreen;
+        color: limegreen;
+    }
+
+    &.disagree {
+        border-color: darkred;
+        color: darkred;
+    }
+}
