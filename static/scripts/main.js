@@ -1,7 +1,6 @@
 const posts = [
     {
         id: 1,
-        title: 'Участок дороги на пересечении Мусы-Джалиля и Омской требует ремонта',
         text: 'lore ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. ',
         date: '2022-01-01',
         category: 'Дороги',
@@ -19,7 +18,7 @@ const posts = [
         id: 3,
         title: 'Согласование высадки деревьев на аллее космонавтов учениками школ',
         text: 'lore ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. ',
-        date: '2022-01-01',
+        date: '2022-01-01',title: 'Участок дороги на пересечении Мусы-Джалиля и Омской требует ремонта',
         category: 'Экология',
         state: true,
         img: 'https://picsum.photos/800/800'
