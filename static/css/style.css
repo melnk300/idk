@@ -1,45 +1,142 @@
 * {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
-
 body {
-    margin: 0;
-    background-color: #e2e2e2;
+  margin: 0;
+  background-color: #e2e2e2;
 }
-
 .navigation {
-    color: #ffffff;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 0.5em;
-    display: flex;
-    list-style-type: none;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: space-around;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.5em;
+  display: flex;
+  list-style-type: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-around;
 }
-
-.navigation > li > a, a:hover, a:active, a:focus, a:visited {
-    color: #333;
-    text-decoration: none;
+.navigation > li > a,
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  color: #333;
+  text-decoration: none;
 }
-
-.link {
-
-}
-
 .link.active:after {
-    display: block;
-    content: '';
-    background-color: orange;
-    width: 100%;
-    height: 2px;
+  display: block;
+  content: '';
+  background-color: orange;
+  width: 100%;
+  height: 2px;
 }
-
 .post {
-
+  max-width: 850px;
+  margin: 25px auto;
 }
-
 .post_image {
-    background-image: url('https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png');
+  display: block;
+  height: 20vh;
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
 }
+.post_content {
+  position: relative;
+}
+.post_content-inner {
+  background-color: #ffffff;
+  padding: 1em;
+  border-radius: 10px;
+  width: 90%;
+  margin: -2em auto 0;
+}
+.post_header {
+  display: flex;
+  justify-content: space-between;
+}
+.post_header_meta {
+  display: flex;
+  flex-direction: column;
+}
+.post_title {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 0;
+}
+.post_date {
+  font-size: 1em;
+  color: #999;
+  margin: 0;
+}
+.post_category {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  margin: 0.5em 0;
+  color: #777;
+}
+.post_category:before {
+  display: block;
+  content: '';
+  background-color: royalblue;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.2em;
+}
+.post_category:before.green {
+  background-color: green;
+}
+.post_category:before.orange {
+  background-color: orange;
+}
+.post_category:before.blue {
+  background-color: blue;
+}
+.post_category:before.violet {
+  background-color: violet;
+}
+.post_category:before.purple {
+  background-color: purple;
+}
+.post_category:before.yellow {
+  background-color: gold;
+}
+.post_category.green:before {
+  background-color: green;
+}
+.post_category.orange:before {
+  background-color: orange;
+}
+.post_category.blue:before {
+  background-color: blue;
+}
+.post_category.violet:before {
+  background-color: violet;
+}
+.post_category.purple:before {
+  background-color: purple;
+}
+.post_category.yellow:before {
+  background-color: gold;
+}
+.post_text {
+  font-size: 1.2em;
+}
+.post_state {
+  margin-top: 0.6em;
+  display: inline-block;
+  padding: 7px 15px;
+  border: 1px solid;
+}
+.post_state.agree {
+  border-color: limegreen;
+  color: limegreen;
+}
+.post_state.disagree {
+  border-color: darkred;
+  color: darkred;
+}
+/*# sourceMappingURL=style.css.map */
