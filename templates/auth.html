@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вход</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/auth.css')}}"
+    />
+  </head>
+  <body>
+    <div class="content in active">
+      <form id="signin">
+        <h1>Войти</h1>
+        <div class="input-container">
+          <label for="login">Логин</label>
+          <input type="text" name="login" placeholder="Логин" id="login" />
+        </div>
+        <div class="input-container">
+          <label for="password">Пароль</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Пароль"
+            id="password"
+          />
+        </div>
+        <button type="button" id="sign_in">Войти</button>
+        <button class="already" type="button" id="toUp">
+          Ещё нет аккаунта? Зарегистрироваться.
+        </button>
+      </form>
+    </div>
+    <div class="content up">
+      <form id="signup">
+        <h1>Зарегистрироваться</h1>
+        <div class="input-container">
+          <label for="login">Email</label>
+          <input type="email" name="login" placeholder="Email" id="emailUp" />
+        </div>
+        <div class="input-container">
+          <label for="login">Логин</label>
+          <input type="text" name="login" placeholder="Логин" id="loginUp" />
+        </div>
+        <div class="input-container">
+          <label for="password">Пароль</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Пароль"
+            id="passwordUp"
+          />
+        </div>
+        <button class="action" id="sign_up" type="button">
+          Зарегистрироваться
+        </button>
+        <button class="already" type="button" id="toIn">
+          Уже есть аккаунт? Войти.
+        </button>
+      </form>
+    </div>
+    <script
+      src="{{url_for('static', filename='js/auth.js')}}"
+      type="module"
+    ></script>
+  </body>
+</html>

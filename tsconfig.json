@@ -1,0 +1,12 @@
+{
+    "extends": "@tsconfig/node16/tsconfig.json",
+    "include": ["static/scripts/**/*"],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+      "strict": false,
+      "outDir": "static/js",
+      "lib": ["ES6", "DOM"],
+      "module": "ES6",
+      "moduleResolution": "node",
+    }
+}

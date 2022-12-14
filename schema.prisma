@@ -1,0 +1,62 @@
+// database
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+// generator
+generator client {
+  provider             = "prisma-client-py"
+  interface            = "sync"
+  recursive_type_depth = 5
+}
+
+model User {
+    id Int @id @default(autoincrement())
+    login String @unique
+    email String @unique
+    password String
+    posts Post[]
+    role Role @default(USER)
+}
+
+model Post {
+    id Int @id @default(autoincrement())
+    title String
+    state PostState @default(NEW)
+    author User @relation(fields: [authorId], references: [id])
+    authorId Int
+    attachments Attachment[]
+    categories Category[]
+    description String
+}
+
+model Category {
+    id Int @id @default(autoincrement())
+    name String @unique
+    posts Post[]
+}
+
+model Attachment {
+    id Int @id @default(autoincrement())
+    name String
+    state AttachmentState @default(BEFORE)
+    post Post @relation(fields: [postId], references: [id])
+    postId Int
+}
+
+enum AttachmentState {
+    BEFORE
+    AFTER
+}
+
+enum Role {
+    USER
+    ADMIN
+}
+
+enum PostState {
+    NEW
+    ACCEPTED
+    REJECTED
+}

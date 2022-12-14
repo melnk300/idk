@@ -1,0 +1,149 @@
+.post {
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+.post_images {
+    position: relative;
+}
+
+.post_image {
+    position: relative;
+    display: block;
+    height: 478.13px;
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.post_image--after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: all .5s ease-in-out;
+    height: 478.13px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.post_images:hover .post_image--after {
+    -webkit-transform: scale(1);
+    transform: scale(1);  
+    cursor: pointer;
+}
+
+.post_content {
+    position: relative;
+}
+
+.post_content-inner {
+    background-color: #ffffff;
+    padding: 1em;
+    border-radius: 10px;
+    width: 90%;
+    margin: -10px auto 0;
+}
+
+.post_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post_header_meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.post_title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.post_date {
+    font-size: 1em;
+    color: #999;
+    margin: 0;
+}
+
+.post_category {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    margin: .5em 0;
+    color: #777;
+}
+
+.post_category:before {
+    display: block;
+    content: '';
+    background-color: royalblue;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 0.2em;
+
+    &.green {
+        background-color: green;
+    }
+
+    &.orange {
+        background-color: orange;
+    }
+
+    &.blue {
+        background-color: blue;
+    }
+
+    &.violet {
+        background-color: violet;
+    }
+
+    &.purple {
+        background-color: purple;
+    }
+
+    &.yellow {
+        background-color: gold;
+    }
+}
+
+.post_text {
+    font-size: 1.2em;
+}
+
+.post_state {
+    display: inline-block;
+    padding: 7px 15px;
+    border: 1px solid;
+    
+}
+
+#deletePost {
+    background-color: rgb(255, 134, 134);
+    border: none;
+    font-size: 16px;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+        height: 80%;
+    }
+}
+
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: .6em;
+}

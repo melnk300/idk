@@ -1,0 +1,45 @@
+.navigation {
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0.5em;
+    display: flex;
+    list-style-type: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.navigation > li > a, a:hover, a:active, a:focus, a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+.link {
+    position: relative;
+    cursor: pointer;
+}
+
+.link:after {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    content: ' ';
+    background-color: orange;
+    width: 0%;
+    height: 2px;
+    transition: .3s;
+}
+
+.link.active:after {
+    left: 0;
+    width: 100%;
+}
+
+
+
+.link:hover:after {
+    left: 0;
+    width: 100%;
+}

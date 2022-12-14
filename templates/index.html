@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
+    <title>Главная</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 </head>
 <body>
@@ -10,13 +10,13 @@
         <ul class="navigation">
             <li><a class="link active" href="/">Главная</a></li>
             <li><a class="link" href="/">LOGO</a></li>
-            <li><a class="link" href="/contact">Вход/Регистрация</a></li>
+            <li><a class="link" href="/lk" id="lk">Вход/Регистрация</a></li>
         </ul>
     </nav>
     <main>
         <div class="content" id="content">
         </div>
     </main>
-    <script src="{{url_for('static', filename='scripts/main.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}" type="module"></script>
 </body>
 </html>

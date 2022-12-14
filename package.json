@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node dist/index.js",
+    "dev:ts": "tsc -w",
+    "dev:flask": "python main.py",
+    "p:s": "npx prisma studio",
+    "dev:docker": "docker compose up"
+  },
+  "dependencies": {
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.11.13"
+  }
+}

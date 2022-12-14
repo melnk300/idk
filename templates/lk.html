@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/lk.css')}}">
+</head>
+<body>
+    <nav>
+        <ul class="navigation">
+            <li><a class="link" href="/">Главная</a></li>
+            <li><a class="link" href="/">LOGO</a></li>
+            <li id="auth"><a class="link active" href="/lk" id="alink">Вход/Регистрация</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="user_card">
+            <div class="bg"></div>
+            <div class="user_meta">
+                <img src="https://i01.fotocdn.net/s115/70984982702d6ad0/user_m/2625284006.jpg" id="avatar">
+                <div id="name">Ruslan Melnik</div>
+                <div id="location">Nizhnevartovsk</div>
+                <button id="newPost">Добавить заявку</button>
+            </div>
+        </div>
+        <div id="content">
+
+        </div>
+    </main>
+    <script src="{{url_for('static', filename='js/lk.js')}}" type="module"></script>
+</body>
+</html>
